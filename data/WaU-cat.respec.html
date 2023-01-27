@@ -1,15 +1,332 @@
 
 <!DOCTYPE HTML><section id="cat" class="normative">
    <h2>Gegevensdefinitie</h2>
-   <!--MIMCM-SamenhangendsemantischinformatiemodelSSI-1.0-0-20230101-20230113-115446 imvertor 2.0.0--><a class="anchor" id="global_package_Adres"></a><section id="global_package_Adres">
+   <!--MIMCM-SamenhangendsemantischinformatiemodelSSI-1.0-0-20230101-20230127-101831 imvertor 2.0.0--><a class="anchor" id="global_package_Adres"></a><section id="global_package_Adres">
       <h3>Domein   Adres</h3>
-      <section id="EAID_CBD2C868_7490_4e63_BA30_85FA7CB31EC0">
+      <section id="EAID_4E1CF794_127A_452f_8DB2_76059AFCA722">
          <h4>   UC 1 Adres - overzicht</h4>
-         <div class="imageinfo overview"><img src="data/Images/EAID_CBD2C868_7490_4e63_BA30_85FA7CB31EC0.png" usemap="#imagemap-EAID_CBD2C868_7490_4e63_BA30_85FA7CB31EC0" alt="Diagram &#xA;                        &#xA;                     "><map name="imagemap-EAID_CBD2C868_7490_4e63_BA30_85FA7CB31EC0"><area shape="rect" alt="Adres" coords="35,43,200,197" href="#graph_EAID_AA52F510_A161_43b5_81A9_FCB577634959"></map><p><b>UC 1 Adres - overzicht</b></p>
+         <div class="imageinfo overview"><img src="data/Images/EAID_4E1CF794_127A_452f_8DB2_76059AFCA722.png" usemap="#imagemap-EAID_4E1CF794_127A_452f_8DB2_76059AFCA722" alt="Diagram &#xA;                        &#xA;                     "><map name="imagemap-EAID_4E1CF794_127A_452f_8DB2_76059AFCA722"><area shape="rect" alt="Objectidentificatie" coords="943,437,1164,575" href="#graph_EAID_D9919F66_9751_4a51_9340_5B8E51A48273"><area shape="rect" alt="Bron" coords="609,428,894,585" href="#graph_EAID_6D133951_1BA8_4031_8513_6F480F260FBA"><area shape="rect" alt="Gegeven" coords="641,46,862,207" href="#graph_EAID_9357AD9C_7CF7_4641_8AF7_B9286F934FB0"><area shape="rect" alt="Registratiegegevens" coords="93,58,314,196" href="#graph_EAID_A8F39713_BB47_4390_8529_FDB425D188B3"><area shape="rect" alt="Adres" coords="35,437,371,689" href="#graph_EAID_AA52F510_A161_43b5_81A9_FCB577634959"></map><p><b>UC 1 Adres - overzicht</b></p>
          </div>
       </section>
       <section id="">
          <h4>Objecttypen   </h4>
+         <a class="anchor" id="graph_EAID_6D133951_1BA8_4031_8513_6F480F260FBA"></a><a class="anchor" id="global_class_Adres_Bron"></a><section id="global_class_Adres_Bron">
+            <h5>   Bron</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Bron</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht attributen  </h6>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Attribuutnaam</th>
+                     <th>Definitie</th>
+                     <th>Formaat</th>
+                     <th>Card</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Bron_registratie">registratie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Bron_objecttype">objecttype</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Bron_objectidentificatie">objectidentificatie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        <a class="link" href="#global_class_Adres_Objectidentificatie">Objectidentificatie</a>
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Bron_attribuut">attribuut</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        
+                        <a class="link" href="#global_class_Adres_Gegeven">Gegeven</a>
+                        
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Gegeven_bron">heeft als herkomst: bron</a>
+                        
+                        Bron
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         <a class="anchor" id="graph_EAID_9357AD9C_7CF7_4641_8AF7_B9286F934FB0"></a><a class="anchor" id="global_class_Adres_Gegeven"></a><section id="global_class_Adres_Gegeven">
+            <h5>   Gegeven</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Gegeven</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht attributen  </h6>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Attribuutnaam</th>
+                     <th>Definitie</th>
+                     <th>Formaat</th>
+                     <th>Card</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Gegeven_eindregistratie">eindregistratie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        Datum­Tijd
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Gegeven_kenmerk">kenmerk</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Gegeven_tijdstipregistratie">tijdstipregistratie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        Datum­Tijd
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Gegeven_waarde">waarde</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Gegeven
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Gegeven_bron">heeft als herkomst: bron</a>
+                        
+                        
+                        <a class="link" href="#global_class_Adres_Bron">Bron</a>
+                        
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>
+                        
+                        <a class="link" href="#global_class_Adres_Registratiegegevens">Registratiegegevens</a>
+                        
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Registratiegegevens_gegeven">bestaat uit: gegeven</a>
+                        
+                        Gegeven
+                        [ 1 .. * ]
+                        </td>
+                     <td>
+                        
+                        <p>Registratiegegevens bestaat uit 1 of meer gegevens.</p>
+                        </td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         <a class="anchor" id="graph_EAID_A8F39713_BB47_4390_8529_FDB425D188B3"></a><a class="anchor" id="global_class_Adres_Registratiegegevens"></a><section id="global_class_Adres_Registratiegegevens">
+            <h5>   Registratiegegevens</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Registratiegegevens</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht attributen  </h6>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Attribuutnaam</th>
+                     <th>Definitie</th>
+                     <th>Formaat</th>
+                     <th>Card</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Registratiegegevens_tijdstipregistratie">tijdstipregistratie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        Datum­Tijd
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Registratiegegevens_eindregistratie">eindregistratie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        Datum­Tijd
+                        </td>
+                     <td>1</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Registratiegegevens
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Registratiegegevens_gegeven">bestaat uit: gegeven</a>
+                        
+                        
+                        <a class="link" href="#global_class_Adres_Gegeven">Gegeven</a>
+                        
+                        [ 1 .. * ]
+                        </td>
+                     <td>
+                        
+                        <p>Registratiegegevens bestaat uit 1 of meer gegevens.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        
+                        <a class="link" href="#global_class_Adres_Adres">Adres</a>
+                        
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Adres_registratiegegevens">is geregistreerd met: registratiegegevens</a>
+                        
+                        Registratiegegevens
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
          <a class="anchor" id="graph_EAID_AA52F510_A161_43b5_81A9_FCB577634959"></a><a class="anchor" id="global_class_Adres_Adres"></a><section id="global_class_Adres_Adres">
             <h5>   Adres</h5>
             
@@ -47,13 +364,26 @@
                         <p>De unieke aanduiding van een nummeraanduiding.</p>
                         </td>
                      <td>
-                        <a class="link" href="#global_class_Adres_Objectnummering">Objectnummering</a>
+                        CHARACTERSTRING
                         </td>
                      <td>1</td>
                   </tr>
                   <tr>
                      <td>
-                        <a class="link" href="#detail_attribute_Adres_Adres_straatnaam">straatnaam</a>
+                        <a class="link" href="#detail_attribute_Adres_Adres_omschrijving">omschrijving</a>
+                        </td>
+                     <td>
+                        
+                        <p>De unieke aanduiding van een nummeraanduiding.</p>
+                        </td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Adres_straat">straat</a>
                         </td>
                      <td>
                         
@@ -61,7 +391,7 @@
                            gemeentelijk besluit.</p>
                         </td>
                      <td>
-                        <a class="link" href="#global_class_Adres_AN">AN</a>
+                        CHARACTERSTRING
                         </td>
                      <td>1</td>
                   </tr>
@@ -91,7 +421,7 @@
                            teken.</p>
                         </td>
                      <td>
-                        <a class="link" href="#global_class_Adres_AN">AN</a>
+                        CHARACTERSTRING
                         </td>
                      <td>0 .. 1</td>
                   </tr>
@@ -107,7 +437,7 @@
                            huisnummer en huisletter.</p>
                         </td>
                      <td>
-                        <a class="link" href="#global_class_Adres_AN">AN</a>
+                        CHARACTERSTRING
                         </td>
                      <td>0 .. 1</td>
                   </tr>
@@ -122,7 +452,7 @@
                            huisnummer.</p>
                         </td>
                      <td>
-                        <a class="link" href="#global_class_Adres_AN">AN</a>
+                        CHARACTERSTRING
                         </td>
                      <td>0 .. 1</td>
                   </tr>
@@ -136,7 +466,142 @@
                            aangewezen woonplaats.</p>
                         </td>
                      <td>
-                        <a class="link" href="#global_class_Adres_AN">AN</a>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <a class="link" href="#detail_attribute_Adres_Adres_isHoofdadres">is hoofdadres</a>
+                        </td>
+                     <td>
+                        
+                        <p>Indicatie of het adres een hoofdadres is.</p>
+                        </td>
+                     <td>
+                        Boolean
+                        </td>
+                     <td>1</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Adres
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Adres_registratiegegevens">geregistreerd­Met: registratiegegevens</a>
+                        
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens">Registratiegegevens</a>
+                        
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>
+                        Adres
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Adres_registratiegegevens">is geregistreerd met: registratiegegevens</a>
+                        
+                        
+                        <a class="link" href="#global_class_Adres_Registratiegegevens">Registratiegegevens</a>
+                        
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">Onroerende­Zaak</a>
+                        
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_adres">bevindt zich op: adres</a>
+                        
+                        Adres
+                        [ 0 .. * ]
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         </section>
+      <section id="">
+         <h4>Gegevensgroeptypen   </h4>
+         <a class="anchor" id="graph_EAID_D9919F66_9751_4a51_9340_5B8E51A48273"></a><a class="anchor" id="global_class_Adres_Objectidentificatie"></a><section id="global_class_Adres_Objectidentificatie">
+            <h5>Gegevensgroep   Objectidentificatie</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Objectidentificatie</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht attributen  </h6>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <colgroup style="width: 10%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Attribuutnaam</th>
+                     <th>Definitie</th>
+                     <th>Formaat</th>
+                     <th>Card</th>
+                  </tr>
+                  <tr>
+                     <td>- 
+                        <a class="link" href="#detail_attribute_Adres_Objectidentificatie_lokaalid">lokaalid</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>- 
+                        <a class="link" href="#detail_attribute_Adres_Objectidentificatie_versie">versie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        CHARACTERSTRING
+                        </td>
+                     <td>1</td>
+                  </tr>
+                  <tr>
+                     <td>- 
+                        <a class="link" href="#detail_attribute_Adres_Objectidentificatie_tijdstipregistratie">tijdstipregistratie</a>
+                        </td>
+                     <td></td>
+                     <td>
+                        Datum­Tijd
                         </td>
                      <td>1</td>
                   </tr>
@@ -146,142 +611,525 @@
             </section>
          </section>
       <section id="">
-         <h4>Gestructureerde datatypen   </h4>
-         <a class="anchor" id="graph_EAID_D1EEE3E0_298E_4705_BD1B_166CC2F8EAD0"></a><a class="anchor" id="global_class_Adres_Objectnummering"></a><section id="global_class_Adres_Objectnummering">
-            <h5>Gestructureerd datatype   Objectnummering</h5>
-            
-            <table style="width: 100%;">
-               <colgroup style="width: 30%;"></colgroup>
-               <colgroup style="width: 70%;"></colgroup>
-               <tbody>
-                  <tr>
-                     <th>Naam</th>
-                     <td>Objectnummering</td>
-                  </tr>
-                  <tr>
-                     <th>Herkomst</th>
-                     <td>BAG</td>
-                  </tr>
-                  <tr>
-                     <th>Definitie</th>
-                     <td>
-                        
-                        <p>Unieke objectaanduiding binnen een gemeente.</p>
-                        </td>
-                  </tr>
-               </tbody>
-            </table>
-            
-            <section id="">
-               <h6>Overzicht data elementen   </h6>
-               
-               <table style="width: 100%;">
-                  <colgroup style="width: 30%;"></colgroup>
-                  <colgroup style="width: 50%;"></colgroup>
-                  <colgroup style="width: 10%;"></colgroup>
-                  <colgroup style="width: 10%;"></colgroup>
-                  <tbody>
-                     <tr>
-                        <th>Data element</th>
-                        <th>Definitie</th>
-                        <th>Formaat</th>
-                        <th>Card</th>
-                     </tr>
-                     <tr>
-                        <td>
-                           <a class="link" href="#detail_attribute_Adres_Objectnummering_gemeentecode">gemeentecode</a>
-                           </td>
-                        <td>
-                           
-                           <p>De unieke aanduiding van de gemeente in Nederland die aan het object een identificatienummer
-                              heeft toegekend. </p>
-                           </td>
-                        <td>
-                           <a class="link" href="#global_class_Adres_AN">AN</a>
-                           </td>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <a class="link" href="#detail_attribute_Adres_Objectnummering_objecttypecode">objecttypecode</a>
-                           </td>
-                        <td>
-                           
-                           <p>Een code waarmee het objecttype van een object wordt
-                              aangegeven.</p>
-                           </td>
-                        <td>
-                           <a class="link" href="#global_class_Adres_Objecttypecode">Objecttypecode</a>
-                           </td>
-                        <td>1</td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <a class="link" href="#detail_attribute_Adres_Objectnummering_objectvolgnummer">objectvolgnummer</a>
-                           </td>
-                        <td>
-                           
-                           <p>Een uniek volgnummer waarmee een object van een bepaald
-                              objecttype binnen een gemeente kan worden aangeduid.</p>
-                           </td>
-                        <td>
-                           <a class="link" href="#global_class_Adres_AN">AN</a>
-                           </td>
-                        <td>1</td>
-                     </tr>
-                  </tbody>
-               </table>
-               </section>
-            </section>
-         </section>
-      <section id="">
-         <h4>Primitieve datatypen   </h4>
-         <a class="anchor" id="graph_EAID_C198FB53_2FB0_4e8e_9A8F_7C4D6176BF47"></a><a class="anchor" id="global_class_Adres_AN"></a><section id="global_class_Adres_AN">
-            <h5>Primitief datatype   AN</h5>
-            
-            <table style="width: 100%;">
-               <colgroup style="width: 30%;"></colgroup>
-               <colgroup style="width: 70%;"></colgroup>
-               <tbody>
-                  <tr>
-                     <th>Naam</th>
-                     <td>AN</td>
-                  </tr>
-                  <tr>
-                     <th>Definitie</th>
-                     <td>
-                        
-                        <p>Datatype met een eigen naam, analoog aan Character­String. De minimale lengte is tenminste
-                           een teken en de eerste positie mag geen spatie bevatten. Alle 335 tekens uit de gestandaardiseerde
-                           deelverzameling MES-1 van Unicode zijn toegestaan[^7-10-1-i].</p>
-                        </td>
-                  </tr>
-               </tbody>
-            </table>
-            </section>
-         </section>
-      <section id="">
-         <h4>Enumeraties   </h4>
-         
-         <table style="width: 100%;">
-            <colgroup style="width: 30%;"></colgroup>
-            <colgroup style="width: 70%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th><a class="anchor" id="graph_EAID_EE8F5A88_E77C_4eff_A12E_19171EF8BB37"></a><a class="anchor" id="global_class_Adres_Objecttypecode"></a><a class="link" href="#detail_class_Adres_Objecttypecode">Objecttypecode</a></th>
-                  <td>
-                     
-                     <p>Een code waarmee het objecttype van een object wordt aangegeven.</p>
-                     </td>
-               </tr>
-            </tbody>
-         </table>
-         </section>
-      <section id="">
          <h4>Attribuut- en relatiesoort details  </h4>
          
          <section id="">
             <h5>Objecttype details  </h5>
+            <a class="anchor" id="detail_class_Adres_Bron"></a><section id="detail_class_Adres_Bron">
+               <h6>   Bron</h6>
+               <a class="anchor" id="detail_attribute_Adres_Bron_registratie"></a><div class="deepheader" id="detail_attribute_Adres_Bron_registratie">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Bron">Bron</a> registratie</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>registratie</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>CHARACTERSTRING</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Bron_objecttype"></a><div class="deepheader" id="detail_attribute_Adres_Bron_objecttype">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Bron">Bron</a> objecttype</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>objecttype</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>CHARACTERSTRING</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               
+               <div class="notoc" id="detail_attribute_Adres_Bron_objectidentificatie">
+                  <h7>Gegevensgroep  <a href="#global_class_Adres_Bron">Bron</a> objectidentificatie</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr></tr>
+                        <tr>
+                           <th>Naam</th>
+                           <td>objectidentificatie</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>
+                              <a class="link" href="#detail_class_Adres_Objectidentificatie">Objectidentificatie</a>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_class_Adres_Objectidentificatie"></a><div class="deepheader" id="detail_class_Adres_Objectidentificatie">
+                  <h7>Gegevensgroeptype   Objectidentificatie</h7>
+                  <a class="anchor" id="detail_attribute_Adres_Objectidentificatie_lokaalid"></a><div class="deepheader" id="detail_attribute_Adres_Objectidentificatie_lokaalid">
+                     <h8>Attribuutsoort details  <a href="#global_class_Adres_Objectidentificatie">Objectidentificatie</a> lokaalid</h8>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Naam</th>
+                              <td>lokaalid</td>
+                           </tr>
+                           <tr>
+                              <th>Mogelijk geen waarde</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie materiële historie</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie formele historie</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Kardinaliteit</th>
+                              <td>1</td>
+                           </tr>
+                           <tr>
+                              <th>Type</th>
+                              <td>CHARACTERSTRING</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     </div>
+                  <a class="anchor" id="detail_attribute_Adres_Objectidentificatie_versie"></a><div class="deepheader" id="detail_attribute_Adres_Objectidentificatie_versie">
+                     <h8>Attribuutsoort details  <a href="#global_class_Adres_Objectidentificatie">Objectidentificatie</a> versie</h8>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Naam</th>
+                              <td>versie</td>
+                           </tr>
+                           <tr>
+                              <th>Mogelijk geen waarde</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie materiële historie</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie formele historie</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Kardinaliteit</th>
+                              <td>1</td>
+                           </tr>
+                           <tr>
+                              <th>Type</th>
+                              <td>CHARACTERSTRING</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     </div>
+                  <a class="anchor" id="detail_attribute_Adres_Objectidentificatie_tijdstipregistratie"></a><div class="deepheader" id="detail_attribute_Adres_Objectidentificatie_tijdstipregistratie">
+                     <h8>Attribuutsoort details  <a href="#global_class_Adres_Objectidentificatie">Objectidentificatie</a> tijdstipregistratie</h8>
+                     
+                     <table style="width: 100%;">
+                        <colgroup style="width: 30%;"></colgroup>
+                        <colgroup style="width: 70%;"></colgroup>
+                        <tbody>
+                           <tr>
+                              <th>Naam</th>
+                              <td>tijdstipregistratie</td>
+                           </tr>
+                           <tr>
+                              <th>Mogelijk geen waarde</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie materiële historie</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Indicatie formele historie</th>
+                              <td>Nee</td>
+                           </tr>
+                           <tr>
+                              <th>Kardinaliteit</th>
+                              <td>1</td>
+                           </tr>
+                           <tr>
+                              <th>Type</th>
+                              <td>Datum­Tijd</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     </div>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Bron_attribuut"></a><div class="deepheader" id="detail_attribute_Adres_Bron_attribuut">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Bron">Bron</a> attribuut</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>attribuut</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>CHARACTERSTRING</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               </section>
+            <a class="anchor" id="detail_class_Adres_Gegeven"></a><section id="detail_class_Adres_Gegeven">
+               <h6>   Gegeven</h6>
+               <a class="anchor" id="detail_attribute_Adres_Gegeven_eindregistratie"></a><div class="deepheader" id="detail_attribute_Adres_Gegeven_eindregistratie">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Gegeven">Gegeven</a> eindregistratie</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>eindregistratie</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>Datum­Tijd</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Gegeven_kenmerk"></a><div class="deepheader" id="detail_attribute_Adres_Gegeven_kenmerk">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Gegeven">Gegeven</a> kenmerk</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>kenmerk</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>CHARACTERSTRING</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Gegeven_tijdstipregistratie"></a><div class="deepheader" id="detail_attribute_Adres_Gegeven_tijdstipregistratie">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Gegeven">Gegeven</a> tijdstipregistratie</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>tijdstipregistratie</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>Datum­Tijd</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Gegeven_waarde"></a><div class="deepheader" id="detail_attribute_Adres_Gegeven_waarde">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Gegeven">Gegeven</a> waarde</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>waarde</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>CHARACTERSTRING</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_association_Adres_Gegeven_bron"></a><div class="deepheader" id="detail_association_Adres_Gegeven_bron">
+                  <h7>Relatiesoort details  <a href="#global_class_Adres_Gegeven">Gegeven</a> heeft als herkomst</h7>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>heeft als herkomst</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Gerelateerd objecttype</th>
+                           <td>
+                              <a class="link" href="#global_class_Adres_Bron">Bron</a>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               </section>
+            <a class="anchor" id="detail_class_Adres_Registratiegegevens"></a><section id="detail_class_Adres_Registratiegegevens">
+               <h6>   Registratiegegevens</h6>
+               <a class="anchor" id="detail_attribute_Adres_Registratiegegevens_tijdstipregistratie"></a><div class="deepheader" id="detail_attribute_Adres_Registratiegegevens_tijdstipregistratie">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Registratiegegevens">Registratiegegevens</a> tijdstipregistratie</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>tijdstipregistratie</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>Datum­Tijd</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Registratiegegevens_eindregistratie"></a><div class="deepheader" id="detail_attribute_Adres_Registratiegegevens_eindregistratie">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Registratiegegevens">Registratiegegevens</a> eindregistratie</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>eindregistratie</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>Datum­Tijd</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_association_Adres_Registratiegegevens_gegeven"></a><div class="deepheader" id="detail_association_Adres_Registratiegegevens_gegeven">
+                  <h7>Relatiesoort details  <a href="#global_class_Adres_Registratiegegevens">Registratiegegevens</a> bestaat uit</h7>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>bestaat uit</td>
+                        </tr>
+                        <tr>
+                           <th>Definitie</th>
+                           <td>
+                              
+                              <p>Registratiegegevens bestaat uit 1 of meer gegevens.</p>
+                              </td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1 .. *</td>
+                        </tr>
+                        <tr>
+                           <th>Gerelateerd objecttype</th>
+                           <td>
+                              <a class="link" href="#global_class_Adres_Gegeven">Gegeven</a>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               </section>
             <a class="anchor" id="detail_class_Adres_Adres"></a><section id="detail_class_Adres_Adres">
                <h6>   Adres</h6>
                <a class="anchor" id="detail_attribute_Adres_Adres_identificatie"></a><div class="deepheader" id="detail_attribute_Adres_Adres_identificatie">
@@ -337,15 +1185,13 @@
                         </tr>
                         <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#detail_class_Adres_Objectnummering">Objectnummering</a>
-                              </td>
+                           <td>CHARACTERSTRING</td>
                         </tr>
                      </tbody>
                   </table>
                   </div>
-               <a class="anchor" id="detail_attribute_Adres_Adres_straatnaam"></a><div class="deepheader" id="detail_attribute_Adres_Adres_straatnaam">
-                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Adres">Adres</a> straatnaam</h7>
+               <a class="anchor" id="detail_attribute_Adres_Adres_omschrijving"></a><div class="deepheader" id="detail_attribute_Adres_Adres_omschrijving">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Adres">Adres</a> omschrijving</h7>
                   
                   <table style="width: 100%;">
                      <colgroup style="width: 30%;"></colgroup>
@@ -353,7 +1199,65 @@
                      <tbody>
                         <tr>
                            <th>Naam</th>
-                           <td>straatnaam</td>
+                           <td>omschrijving</td>
+                        </tr>
+                        <tr>
+                           <th>Herkomst</th>
+                           <td>BAG</td>
+                        </tr>
+                        <tr>
+                           <th>Definitie</th>
+                           <td>
+                              
+                              <p>De unieke aanduiding van een nummeraanduiding.</p>
+                              </td>
+                        </tr>
+                        <tr>
+                           <th>Herkomst definitie</th>
+                           <td>Grondslagen Basis Registratie Adressen versie 2.0 </td>
+                        </tr>
+                        <tr>
+                           <th>Toelichting</th>
+                           <td>Elke nummeraanduiding waarvan gegevens zijn opgenomen in de basisregistratie adressen
+                              en gebouwen, wordt uniek aangeduid door middel van een identificatiecode.</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie authentiek</th>
+                           <td>Authentiek</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>CHARACTERSTRING</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Adres_straat"></a><div class="deepheader" id="detail_attribute_Adres_Adres_straat">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Adres">Adres</a> straat</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>straat</td>
                         </tr>
                         <tr>
                            <th>Herkomst</th>
@@ -397,9 +1301,7 @@
                         </tr>
                         <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#global_class_Adres_AN">AN</a>
-                              </td>
+                           <td>CHARACTERSTRING</td>
                         </tr>
                      </tbody>
                   </table>
@@ -525,9 +1427,7 @@
                         </tr>
                         <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#global_class_Adres_AN">AN</a>
-                              </td>
+                           <td>CHARACTERSTRING</td>
                         </tr>
                      </tbody>
                   </table>
@@ -592,9 +1492,7 @@
                         </tr>
                         <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#global_class_Adres_AN">AN</a>
-                              </td>
+                           <td>CHARACTERSTRING</td>
                         </tr>
                      </tbody>
                   </table>
@@ -657,9 +1555,7 @@
                         </tr>
                         <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#global_class_Adres_AN">AN</a>
-                              </td>
+                           <td>CHARACTERSTRING</td>
                         </tr>
                      </tbody>
                   </table>
@@ -724,8 +1620,101 @@
                         </tr>
                         <tr>
                            <th>Type</th>
+                           <td>CHARACTERSTRING</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_attribute_Adres_Adres_isHoofdadres"></a><div class="deepheader" id="detail_attribute_Adres_Adres_isHoofdadres">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Adres">Adres</a> is hoofdadres</h7>
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>is hoofdadres</td>
+                        </tr>
+                        <tr>
+                           <th>Definitie</th>
                            <td>
-                              <a class="link" href="#global_class_Adres_AN">AN</a>
+                              
+                              <p>Indicatie of het adres een hoofdadres is.</p>
+                              </td>
+                        </tr>
+                        <tr>
+                           <th>Toelichting</th>
+                           <td>In de BAG kan een adres een hoofdadres of nevenadres van een Adresseerbaarobject zijn.</td>
+                        </tr>
+                        <tr>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Type</th>
+                           <td>Boolean</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_association_Adres_Adres_registratiegegevens"></a><div class="deepheader" id="detail_association_Adres_Adres_registratiegegevens">
+                  <h7>Relatiesoort details  <a href="#global_class_Adres_Adres">Adres</a> geregistreerd­Met</h7>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>geregistreerd­Met</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Gerelateerd objecttype</th>
+                           <td>
+                              <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens">Registratiegegevens</a>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_association_Adres_Adres_registratiegegevens"></a><div class="deepheader" id="detail_association_Adres_Adres_registratiegegevens">
+                  <h7>Relatiesoort details  <a href="#global_class_Adres_Adres">Adres</a> is geregistreerd met</h7>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>is geregistreerd met</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Gerelateerd objecttype</th>
+                           <td>
+                              <a class="link" href="#global_class_Adres_Registratiegegevens">Registratiegegevens</a>
                               </td>
                         </tr>
                      </tbody>
@@ -733,16 +1722,13 @@
                   </div>
                </section>
             </section>
-         
-         
-         
          
          <section id="">
-            <h5>Gestructureerde datatypen  </h5>
-            <a class="anchor" id="detail_class_Adres_Objectnummering"></a><section id="detail_class_Adres_Objectnummering">
-               <h6>Gestructureerd datatype   Objectnummering</h6>
-               <a class="anchor" id="detail_attribute_Adres_Objectnummering_gemeentecode"></a><div class="deepheader" id="detail_attribute_Adres_Objectnummering_gemeentecode">
-                  <h7>Data element  <a href="#global_class_Adres_Objectnummering">Objectnummering</a> gemeentecode</h7>
+            <h5>Gegevensgroeptype details  </h5>
+            <a class="anchor" id="detail_class_Adres_Objectidentificatie"></a><section id="detail_class_Adres_Objectidentificatie">
+               <h6>Gegevensgroeptype   Objectidentificatie</h6>
+               <a class="anchor" id="detail_attribute_Adres_Objectidentificatie_lokaalid"></a><div class="deepheader" id="detail_attribute_Adres_Objectidentificatie_lokaalid">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Objectidentificatie">Objectidentificatie</a> lokaalid</h7>
                   
                   <table style="width: 100%;">
                      <colgroup style="width: 30%;"></colgroup>
@@ -750,43 +1736,33 @@
                      <tbody>
                         <tr>
                            <th>Naam</th>
-                           <td>gemeentecode</td>
+                           <td>lokaalid</td>
                         </tr>
                         <tr>
-                           <th>Herkomst</th>
-                           <td>BAG</td>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
-                           <th>Definitie</th>
-                           <td>
-                              
-                              <p>De unieke aanduiding van de gemeente in Nederland die aan het object een identificatienummer
-                                 heeft toegekend. </p>
-                              </td>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
-                           <th>Herkomst definitie</th>
-                           <td>Ontleend aan Logisch Ontwerp GBA versie 3.0</td>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
                            <th>Kardinaliteit</th>
                            <td>1</td>
                         </tr>
                         <tr>
-                           <th>Formeel patroon</th>
-                           <td>^[0-9]{4}$</td>
-                        </tr>
-                        <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#global_class_Adres_AN">AN</a>
-                              </td>
+                           <td>CHARACTERSTRING</td>
                         </tr>
                      </tbody>
                   </table>
                   </div>
-               <a class="anchor" id="detail_attribute_Adres_Objectnummering_objecttypecode"></a><div class="deepheader" id="detail_attribute_Adres_Objectnummering_objecttypecode">
-                  <h7>Data element  <a href="#global_class_Adres_Objectnummering">Objectnummering</a> objecttypecode</h7>
+               <a class="anchor" id="detail_attribute_Adres_Objectidentificatie_versie"></a><div class="deepheader" id="detail_attribute_Adres_Objectidentificatie_versie">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Objectidentificatie">Objectidentificatie</a> versie</h7>
                   
                   <table style="width: 100%;">
                      <colgroup style="width: 30%;"></colgroup>
@@ -794,43 +1770,33 @@
                      <tbody>
                         <tr>
                            <th>Naam</th>
-                           <td>objecttypecode</td>
+                           <td>versie</td>
                         </tr>
                         <tr>
-                           <th>Herkomst</th>
-                           <td>BAG</td>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
-                           <th>Definitie</th>
-                           <td>
-                              
-                              <p>Een code waarmee het objecttype van een object wordt
-                                 aangegeven.</p>
-                              </td>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
-                           <th>Herkomst definitie</th>
-                           <td>Grondslagen Basis Gebouwen Registratie versie 4.0 </td>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
                            <th>Kardinaliteit</th>
                            <td>1</td>
                         </tr>
                         <tr>
-                           <th>Formeel patroon</th>
-                           <td>^[0-9]{2}$</td>
-                        </tr>
-                        <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#detail_class_Adres_Objecttypecode">Objecttypecode</a>
-                              </td>
+                           <td>CHARACTERSTRING</td>
                         </tr>
                      </tbody>
                   </table>
                   </div>
-               <a class="anchor" id="detail_attribute_Adres_Objectnummering_objectvolgnummer"></a><div class="deepheader" id="detail_attribute_Adres_Objectnummering_objectvolgnummer">
-                  <h7>Data element  <a href="#global_class_Adres_Objectnummering">Objectnummering</a> objectvolgnummer</h7>
+               <a class="anchor" id="detail_attribute_Adres_Objectidentificatie_tijdstipregistratie"></a><div class="deepheader" id="detail_attribute_Adres_Objectidentificatie_tijdstipregistratie">
+                  <h7>Attribuutsoort details  <a href="#global_class_Adres_Objectidentificatie">Objectidentificatie</a> tijdstipregistratie</h7>
                   
                   <table style="width: 100%;">
                      <colgroup style="width: 30%;"></colgroup>
@@ -838,50 +1804,43 @@
                      <tbody>
                         <tr>
                            <th>Naam</th>
-                           <td>objectvolgnummer</td>
+                           <td>tijdstipregistratie</td>
                         </tr>
                         <tr>
-                           <th>Herkomst</th>
-                           <td>BAG</td>
+                           <th>Mogelijk geen waarde</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
-                           <th>Definitie</th>
-                           <td>
-                              
-                              <p>Een uniek volgnummer waarmee een object van een bepaald
-                                 objecttype binnen een gemeente kan worden aangeduid.</p>
-                              </td>
+                           <th>Indicatie materiële historie</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
-                           <th>Herkomst definitie</th>
-                           <td>Grondslagen Basis Gebouwen Registratie versie 2.3</td>
+                           <th>Indicatie formele historie</th>
+                           <td>Nee</td>
                         </tr>
                         <tr>
                            <th>Kardinaliteit</th>
                            <td>1</td>
                         </tr>
                         <tr>
-                           <th>Formeel patroon</th>
-                           <td>^[0-9]{10}$</td>
-                        </tr>
-                        <tr>
                            <th>Type</th>
-                           <td>
-                              <a class="link" href="#global_class_Adres_AN">AN</a>
-                              </td>
+                           <td>Datum­Tijd</td>
                         </tr>
                      </tbody>
                   </table>
                   </div>
                </section>
             </section>
+         
+         
+         
          
          </section>
    </section><a class="anchor" id="global_package_Koopsom"></a><section id="global_package_Koopsom">
       <h3>Domein   Koopsom</h3>
       <section id="EAID_694B17D2_1DC0_402e_9360_CB847FCF6205">
          <h4>   UC2 Koopsom - overzicht</h4>
-         <div class="imageinfo overview"><img src="data/Images/EAID_694B17D2_1DC0_402e_9360_CB847FCF6205.png" usemap="#imagemap-EAID_694B17D2_1DC0_402e_9360_CB847FCF6205" alt="Diagram &#xA;                        &#xA;                     "><map name="imagemap-EAID_694B17D2_1DC0_402e_9360_CB847FCF6205"><area shape="rect" alt="Koopsom" coords="35,43,133,119" href="#graph_EAID_E69EBD96_7D7B_4413_8D1A_A0985CB2D192"></map><p><b>UC2 Koopsom - overzicht</b></p>
+         <div class="imageinfo overview"><img src="data/Images/EAID_694B17D2_1DC0_402e_9360_CB847FCF6205.png" usemap="#imagemap-EAID_694B17D2_1DC0_402e_9360_CB847FCF6205" alt="Diagram &#xA;                        &#xA;                     "><map name="imagemap-EAID_694B17D2_1DC0_402e_9360_CB847FCF6205"><area shape="rect" alt="Koopsom" coords="35,49,185,149" href="#graph_EAID_E69EBD96_7D7B_4413_8D1A_A0985CB2D192"></map><p><b>UC2 Koopsom - overzicht</b></p>
          </div>
       </section>
       <section id="">
@@ -923,6 +1882,35 @@
                         Integer
                         </td>
                      <td>1</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">Onroerende­Zaak</a>
+                        
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_koopsom">verkocht voor: koopsom</a>
+                        
+                        Koopsom
+                        [ 0 .. 1 ]
+                        </td>
+                     <td></td>
                   </tr>
                </tbody>
             </table>
@@ -978,79 +1966,396 @@
          
          
          </section>
-   </section>
-</section>
-<section id="lis" class="normative">
-   <h2>Inhoud van waardenlijsten</h2>
-   <!--MIMCM-SamenhangendsemantischinformatiemodelSSI-1.0-0-20230101-20230113-115446 imvertor 2.0.0-->
-   <section id="">
-      <h3>Enumeratie inhoud   </h3><a class="anchor" id="graph_EAID_EE8F5A88_E77C_4eff_A12E_19171EF8BB37"></a><a class="anchor" id="detail_class_Adres_Objecttypecode"></a><section id="detail_class_Adres_Objecttypecode">
-         <h4>Enumeratie details  Objecttypecode</h4>
+   </section><a class="anchor" id="global_package_SamenhangendSemantischInformatiemodelSSI"></a><section id="global_package_SamenhangendSemantischInformatiemodelSSI">
+      <h3>Domein   Samenhangend Semantisch Informatiemodel (SSI)</h3>
+      <section id="">
+         <h4>Objecttypen   </h4>
+         <a class="anchor" id="graph_EAID_1F355588_F852_44f6_9F03_A9562870FBBB"></a><a class="anchor" id="global_class_SamenhangendSemantischInformatiemodelSSI_AdresseerbaarObject"></a><section id="global_class_SamenhangendSemantischInformatiemodelSSI_AdresseerbaarObject">
+            <h5>   Adresseerbaar object</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Adresseerbaar object</td>
+                  </tr>
+                  <tr>
+                     <th>Herkomst</th>
+                     <td>BAG</td>
+                  </tr>
+                  <tr>
+                     <th>Definitie</th>
+                     <td>
+                        
+                        <p>Een Adresseerbaar object is een (abstract) object waaraan adressen kunnen worden toegekend</p>
+                        </td>
+                  </tr>
+                  <tr>
+                     <th>Herkomst definitie</th>
+                     <td>BAG</td>
+                  </tr>
+                  <tr>
+                     <th>Toelichting</th>
+                     <td>Een Adresseerbaar object is een Standplaats, een Ligplaats of een Verblijfsobject.</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens">Registratiegegevens</a>
+                        
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens_primaireBron">heeft: primaire­Bron</a>
+                        
+                        Adresseerbaar object
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         <a class="anchor" id="graph_EAID_12968FC3_B184_4a4c_8C6D_EBEACF4F09AA"></a><a class="anchor" id="global_class_SamenhangendSemantischInformatiemodelSSI_Leidingnetwerk"></a><section id="global_class_SamenhangendSemantischInformatiemodelSSI_Leidingnetwerk">
+            <h5>   Leidingnetwerk</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Leidingnetwerk</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Leidingnetwerk
+                        is specialisatie van
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">Onroerende­Zaak</a>
+                        
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         <a class="anchor" id="graph_EAID_3A8BB735_BAFD_4e1d_8830_38519B086DE2"></a><a class="anchor" id="global_class_SamenhangendSemantischInformatiemodelSSI_Perceel"></a><section id="global_class_SamenhangendSemantischInformatiemodelSSI_Perceel">
+            <h5>   Perceel</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Perceel</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Perceel
+                        is specialisatie van
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">Onroerende­Zaak</a>
+                        
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         <a class="anchor" id="graph_EAID_4127A848_830E_4c29_9EF0_7E84A97FFF2D"></a><a class="anchor" id="global_class_SamenhangendSemantischInformatiemodelSSI_Appartementsrecht"></a><section id="global_class_SamenhangendSemantischInformatiemodelSSI_Appartementsrecht">
+            <h5>   Appartementsrecht</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Appartementsrecht</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Appartementsrecht
+                        is specialisatie van
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">Onroerende­Zaak</a>
+                        
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         <a class="anchor" id="graph_EAID_C4D8411D_956A_4859_A241_06DA57604B35"></a><a class="anchor" id="global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak"></a><section id="global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">
+            <h5>   Onroerende­Zaak</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Onroerende­Zaak</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Onroerende­Zaak
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_adres">bevindt zich op: adres</a>
+                        
+                        
+                        <a class="link" href="#global_class_Adres_Adres">Adres</a>
+                        
+                        [ 0 .. * ]
+                        </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>
+                        Onroerende­Zaak
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_koopsom">verkocht voor: koopsom</a>
+                        
+                        
+                        <a class="link" href="#global_class_Koopsom_Koopsom">Koopsom</a>
+                        
+                        [ 0 .. 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         <a class="anchor" id="graph_EAID_E05719D9_145C_48fd_B6EE_C14569493E6F"></a><a class="anchor" id="global_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens"></a><section id="global_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens">
+            <h5>   Registratiegegevens</h5>
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 30%;"></colgroup>
+               <colgroup style="width: 70%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Naam</th>
+                     <td>Registratiegegevens</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            <h6>Overzicht relaties  </h6>
+            
+            
+            <table style="width: 100%;">
+               <colgroup style="width: 50%;"></colgroup>
+               <colgroup style="width: 50%;"></colgroup>
+               <tbody>
+                  <tr>
+                     <th>Rol naam met kardinaliteiten</th>
+                     <th>Definitie</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        Registratiegegevens
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens_primaireBron">heeft: primaire­Bron</a>
+                        
+                        
+                        <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_AdresseerbaarObject">Adresseerbaar object</a>
+                        
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>
+                        
+                        <a class="link" href="#global_class_Adres_Adres">Adres</a>
+                        
+                        [ 1 ]
+                        
+                        <a class="link" href="#detail_association_Adres_Adres_registratiegegevens">geregistreerd­Met: registratiegegevens</a>
+                        
+                        Registratiegegevens
+                        [ 1 ]
+                        </td>
+                     <td></td>
+                  </tr>
+               </tbody>
+            </table>
+            
+            </section>
+         </section>
+      <section id="">
+         <h4>Attribuut- en relatiesoort details  </h4>
          
-         <table style="width: 100%;" class="list">
-            <colgroup></colgroup>
-            <tbody>
-               <tr>
-                  <td>
-                     
-                     <p>Een code waarmee het objecttype van een object wordt aangegeven.</p>
-                     </td>
-               </tr>
-            </tbody>
-         </table>
+         <section id="">
+            <h5>Objecttype details  </h5>
+            <a class="anchor" id="detail_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak"></a><section id="detail_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">
+               <h6>   Onroerende­Zaak</h6>
+               <a class="anchor" id="detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_adres"></a><div class="deepheader" id="detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_adres">
+                  <h7>Relatiesoort details  <a href="#global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">Onroerende­Zaak</a> bevindt zich op</h7>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>bevindt zich op</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>0 .. *</td>
+                        </tr>
+                        <tr>
+                           <th>Gerelateerd objecttype</th>
+                           <td>
+                              <a class="link" href="#global_class_Adres_Adres">Adres</a>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               <a class="anchor" id="detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_koopsom"></a><div class="deepheader" id="detail_association_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak_koopsom">
+                  <h7>Relatiesoort details  <a href="#global_class_SamenhangendSemantischInformatiemodelSSI_OnroerendeZaak">Onroerende­Zaak</a> verkocht voor</h7>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>verkocht voor</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>0 .. 1</td>
+                        </tr>
+                        <tr>
+                           <th>Gerelateerd objecttype</th>
+                           <td>
+                              <a class="link" href="#global_class_Koopsom_Koopsom">Koopsom</a>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               </section>
+            <a class="anchor" id="detail_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens"></a><section id="detail_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens">
+               <h6>   Registratiegegevens</h6>
+               <a class="anchor" id="detail_association_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens_primaireBron"></a><div class="deepheader" id="detail_association_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens_primaireBron">
+                  <h7>Relatiesoort details  <a href="#global_class_SamenhangendSemantischInformatiemodelSSI_Registratiegegevens">Registratiegegevens</a> heeft</h7>
+                  
+                  
+                  <table style="width: 100%;">
+                     <colgroup style="width: 30%;"></colgroup>
+                     <colgroup style="width: 70%;"></colgroup>
+                     <tbody>
+                        <tr>
+                           <th>Naam</th>
+                           <td>heeft</td>
+                        </tr>
+                        <tr>
+                           <th>Kardinaliteit</th>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <th>Gerelateerd objecttype</th>
+                           <td>
+                              <a class="link" href="#global_class_SamenhangendSemantischInformatiemodelSSI_AdresseerbaarObject">Adresseerbaar object</a>
+                              </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </div>
+               </section>
+            </section>
          
-         <table style="width: 100%;" class="list">
-            <colgroup style="width: 40%;"></colgroup>
-            <colgroup style="width: 60%;"></colgroup>
-            <tbody>
-               <tr>
-                  <th>Waarde</th>
-                  <th>Omschrijving</th>
-               </tr>
-               <tr>
-                  <th>01</th>
-                  <td>
-                     
-                     <p>Verblijfsobject</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>02</th>
-                  <td>
-                     
-                     <p>Ligplaats</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>03</th>
-                  <td>
-                     
-                     <p>Standplaats</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>10</th>
-                  <td>
-                     
-                     <p>Pand</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>20</th>
-                  <td>
-                     
-                     <p>Nummeraanduiding</p>
-                     </td>
-               </tr>
-               <tr>
-                  <th>30</th>
-                  <td>
-                     
-                     <p>Openbare ruimte</p>
-                     </td>
-               </tr>
-            </tbody>
-         </table>
+         
+         
+         
+         
          </section>
    </section>
 </section>
