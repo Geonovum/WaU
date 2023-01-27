@@ -22,8 +22,8 @@ The repositories below contain the specific methodology of use cases and deliver
 - Use Case 5 Koppelen externe bron(nen): https://github.com/Geonovum/WaU-UC5
 
 ## Deliverables
-Samenhangend semantisch model: https://github.com/Geonovum/WaU-SAM
-Generieke modelleerpatronen: https://github.com/Geonovum/WaU-GMP
-Standaard/praktijkrichtlijn Vertaalspecificaties: https://github.com/Geonovum/WaU-VSP
+- Samenhangend semantisch model: https://github.com/Geonovum/WaU-SAM
+- Generieke modelleerpatronen: https://github.com/Geonovum/WaU-GMP
+- Standaard/praktijkrichtlijn Vertaalspecificaties: https://github.com/Geonovum/WaU-VSP
 
 
