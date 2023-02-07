@@ -1,12 +1,12 @@
 # WaU
 In this repository we will collect documents related to:
 
-- architecture description
-- principles of orchestration
-- (possibly) change requests for MIM, and API directive
-- [preconditions and requirements for source services](preconditions.md)
-- bottlenecks in establishing cohesive relationships between base and keu registrations
-- (position papers)
+- [Architecture description](architecture.md)
+- Principles of orchestration
+- (Possibly) change requests for MIM, and API directive
+- [Preconditions and requirements for source services](preconditions.md)
+- Bottlenecks in establishing cohesive relationships between base and keu registrations
+- (Position papers)
 
 ## Related repositories
 
