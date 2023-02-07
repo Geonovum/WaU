@@ -1,4 +1,7 @@
 # WaU
+<<<<<<< HEAD
+Werk aan Uitvoering - samenhangend semantisch model
+=======
 In this repository we will collect documents related to:
 
 - [Architecture description](architecture.md)
@@ -23,3 +26,9 @@ The repositories below contain the specific methodology of use cases and deliver
 - Samenhangend semantisch model: https://github.com/Geonovum/WaU-SAM
 - Generieke modelleerpatronen: https://github.com/Geonovum/WaU-GMP
 - Standaard/praktijkrichtlijn Vertaalspecificaties: https://github.com/Geonovum/WaU-VSP
+<<<<<<< HEAD
+
+
+>>>>>>> branch 'main' of https://github.com/Geonovum/WaU.git
+=======
+>>>>>>> branch 'main' of https://github.com/Geonovum/WaU.git
