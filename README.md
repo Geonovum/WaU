@@ -4,7 +4,7 @@ In this repository we will collect documents related to:
 - architecture description
 - principles of orchestration
 - (possibly) change requests for MIM, and API directive
-- preconditions and requirements for source services
+- [preconditions and requirements for source services](preconditions.md)
 - bottlenecks in establishing cohesive relationships between base and keu registrations
 - (position papers)
 
@@ -23,5 +23,3 @@ The repositories below contain the specific methodology of use cases and deliver
 - Samenhangend semantisch model: https://github.com/Geonovum/WaU-SAM
 - Generieke modelleerpatronen: https://github.com/Geonovum/WaU-GMP
 - Standaard/praktijkrichtlijn Vertaalspecificaties: https://github.com/Geonovum/WaU-VSP
-
-
