@@ -1,6 +1,6 @@
 # Preconditions
 
-This document describes the challenges and possible solutions when using existing API's for source retrieval.
+This document describes the challenges and possible solutions when using existing APIs for source retrieval.
 
 ## Challenges
 
@@ -12,7 +12,7 @@ In many cases, an orchestration request needs to query multiple related objects 
 
 ## Eager loading
 
-When related object types are part of the same source model and thus exposed by the same source API, the most efficiënt way would be to support *eager loading*. This means that when requesting `Building` objects, the related `Address` objects can be retrieved within the same requests.
+When related object types are part of the same source model and thus exposed by the same source API, the most efficient way would be to support *eager loading*. This means that when requesting `Building` objects, the related `Address` objects can be retrieved at the same time within the same request.
 
 @TODO describe eager loading in detail for both relations and inverse relations.
 
@@ -21,7 +21,7 @@ Remaining challenge:
 
 ## Batch requests
 
-When related object types are part of different source models and thus exposed by different source APIs, eager loading does not solve this problem. We'll always need to query at least two source APIs, but we can still leverage efficient access patterns to reduce the required number of requests.
+When related object types are part of different source models and thus exposed by different source APIs, eager loading does not solve this problem. We'll always need to query at least two source APIs, but we can still leverage efficient access patterns to reduce the number of requests needed.
 
 Batch loading would make it possible to retrieve multiple objects in a single request by passing a set of identifiers. This would prevent having to perform many separate requests for every single object. For each individual identifier, the source API may or may not yield a matching object, depending on the existence of the object in the source dataset.
 
