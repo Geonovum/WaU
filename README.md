@@ -3,7 +3,7 @@
 In this repository we will collect documents related to:
 
 - [Architecture description](architecture.md)
-- Principles of orchestration
+- [Principles of orchestration](principles-of-orchestration.md)
 - (Possibly) change requests for MIM, and API directive
 - [Preconditions and requirements for source services](preconditions.md)
 - Bottlenecks in establishing cohesive relationships between base and keu registrations
