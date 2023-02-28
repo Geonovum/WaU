@@ -1,11 +1,13 @@
 # WaU
 
+ReSpec documentation: https://geonovum.github.io/WaU/
+
 In this repository we will collect documents related to:
 
-- [Architecture description](architecture.md)
-- [Principles of orchestration](principles-of-orchestration.md)
-- (Possibly) change requests for MIM, and API directive
-- [Preconditions and requirements for source services](preconditions.md)
+- [Architecture goals](architecture-goals.md)
+- [Orchestration principles](orchestration.md)
+- [Optimization techniques](optimization-techniques.md)
+- [(Possibly) change requests for MIM, and API strategy / design rules](change-requests.md)
 - Bottlenecks in establishing cohesive relationships between base and keu registrations
 - (Position papers)
 

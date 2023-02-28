@@ -1,14 +1,14 @@
 //-------------------------------------------------------------------------------------
 //-- File. . . :  config.js
-//-- Bevat . . :  Template voor de  configuratie voor respec  
+//-- Bevat . . :  Template voor de  configuratie voor respec
 //--              Gebaseerd op https://github.com/Geonovum/respec/wiki
-//--              Deze file moet worden neergezet in de root-directory van de 
-//--              betreffende standaard. 
+//--              Deze file moet worden neergezet in de root-directory van de
+//--              betreffende standaard.
 //-- Door. . . :  Jan van Gelder
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
-//-- Log . . . :  20181015 - JvG - Initiele versie 
-//-- Log . . . :  20191022 - GRK - Handreiking Archiveren ruimtelijke plannen v2.0      
+//-- Log . . . :  20181015 - JvG - Initiele versie
+//-- Log . . . :  20191022 - GRK - Handreiking Archiveren ruimtelijke plannen v2.0
 //-------------------------------------------------------------------------------------
 
 //-- Postprocessors -------------------------------------------------------------------
@@ -16,14 +16,14 @@
 //-- haalt gh-pages weg aan het eind van een URL
 //-- Stopt zodra de eerste is gevonden (want komt maar 1x voor)
 //-- JvG 2019-11-12
-function custGHPG(respecConfig)  
+function custGHPG(respecConfig)
 {
   var tags = document.getElementsByTagName("a");
   var srch = "gh-pages";
   var slen = srch.length;
   var i;
 
-  for (i = 0; i < tags.length; i++) 
+  for (i = 0; i < tags.length; i++)
   {
     if(tags[i].href.indexOf(srch) > -1)
     {
@@ -32,11 +32,11 @@ function custGHPG(respecConfig)
       console.log(tags[i].href + " is aangepast");
       break;
     }
-  } 
+  }
 }
 
 //-------------------------------------------------------------------------------------
-var respecConfig = 
+var respecConfig =
 {
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   //specStatus: "GN-BASIS",             // Basis Document
@@ -53,21 +53,21 @@ var respecConfig =
   //specType: "WA",                   // Werkafspraak
   //specType: "BD",                   // Beheer Documentatie
   //-- format is verplicht! -----------------------------------------------------------
-  // format: "markdown",                 // altijd "markdown" - JvG W3C aangepast, op 1 plek markdown aangeven    
+  // format: "markdown",                 // altijd "markdown" - JvG W3C aangepast, op 1 plek markdown aangeven
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2022-07-11",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/geonovum/WaU-UC1",
+  github: "https://github.com/geonovum/WaU",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/geonovum/WaU-UC1/issues",
+  issueBase: "https://github.com/geonovum/WaU/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://geonovum.github.io/WaU-UC1",
+  edDraftURI: "https://geonovum.github.io/WaU",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
-  
-  
-  editors: 
+
+
+  editors:
  [
     {
       name:       "Geonovum",
@@ -77,7 +77,7 @@ var respecConfig =
   ],
   //-- de namen van de Author(s) ------------------------------------------------------
   //-- vul in: per Author: name:, company:, companyURL: -------------------------------
-  authors: 
+  authors:
   [
     {
       name:       "Geonovum",
@@ -89,8 +89,8 @@ var respecConfig =
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
     },
-    
-    
+
+
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "WaU",  	              // Wordt gebruikt in de document URL
@@ -113,10 +113,10 @@ var respecConfig =
   //licence: "cc-by-nd",            // bronvermelding, geen afgeleide werken (default)
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
-  
+
   //-- localBiblio: lokale bibliografie, voor verwijzigingen
-  //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
-  localBiblio: 
+  //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging
+  localBiblio:
   {
      "CITAAT": {
         title:      "Titel van het Citaat",
@@ -162,9 +162,9 @@ var respecConfig =
   },
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
-  //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
+  //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit!
  //previousPublishDate: "2022-06-28",  	    // Format is "YYY-MM-DD"
-  //previousMaturity: "VV",                   // kies 1 van deze 2 regels  	  
+  //previousMaturity: "VV",                   // kies 1 van deze 2 regels
   //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
 
   //-- Optionele parameters:

@@ -1,8 +1,6 @@
-# Preconditions
+# Optimization techniques
 
 This document describes the challenges and possible solutions when using existing APIs for source retrieval.
-
-## Challenges
 
 In general, REST APIs offer two basic access patterns for a given object type:
 - Retrieving a single object by its identifier (passed in the URL)
