@@ -24,5 +24,5 @@ The repositories below contain the specific methodology of use cases and deliver
 
 ## Deliverables
 - Cross-domein model: https://github.com/Geonovum/WaU-imx-geo
-- Generieke modelleerpatronen: https://github.com/Geonovum/WaU-GMP
-- Standaard/praktijkrichtlijn Vertaalspecificaties: https://github.com/Geonovum/WaU-VSP
+- Lineage model en modelleerpatroon: https://github.com/Geonovum/WaU-LIN
+- Standaard/praktijkrichtlijn Vertaalspecificaties: https://github.com/Geonovum/WaU-MAP
