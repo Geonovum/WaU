@@ -49,7 +49,7 @@ The query interface, also known as a query API, is the component that allows the
 orchestration engine to interact with the source service using queries. For the
 Kadaster orchestration engine, a well-defined interface is provided through
 which queries can be formulated, executed, and results obtained. It uses the
-SPARQL query language to request the source service to gain a JSON output.
+GraphQL query language to request the source service to gain a JSON output.
 Geometry is retreived as WKT-format?
 
 The specific implementation and syntax for the query interface the orchestration
@@ -169,7 +169,7 @@ engine requires, is described here:
 ### Endpoint
 
 The source service must be accessible and available via the Internet, to enable
-the orchestration engine to interact with it. This requires that the (SPARQL?)
+the orchestration engine to interact with it. This requires that the (GraphQL?)
 endpoints to use to communicate and request data from are provided by the source
 service.
 
