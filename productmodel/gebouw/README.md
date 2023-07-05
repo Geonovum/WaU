@@ -1,4 +1,5 @@
-# WaU-UC2
-Working environment for Use case 2 Gebouw
+# Productmodel Gebouw
 
-Werkversie respec documentatie van model: https://geonovum.github.io/WaU-UC2/
+Dit productmodel is ontwikkeld in het kader van het project Semantische samenhang tussen basisregistraties. Het heeft geen formele status.
+
+De werkversie van de catalogus is te raadplegen via: https://geonovum.github.io/WaU/productmodel/gebouw
