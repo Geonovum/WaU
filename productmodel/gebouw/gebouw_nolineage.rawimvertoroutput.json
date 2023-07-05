@@ -1,0 +1,233 @@
+
+  { "openapi" : "3.0.0",
+    "info" : 
+    { "title" : "Gebouw - logisch",
+      "description" : "Gebouw - logisch components\/schema",
+      "version" : "1.0" },
+    "paths" : 
+    { "\/" : 
+      { "get" : 
+        { "description" : "a path",
+          "responses" : 
+          { "200" : 
+            { "description" : "okay",
+              "content" : 
+              { "text\/plain" : 
+                { "schema" : 
+                  { "type" : "string",
+                    "example" : "pong" } } } } } } } },
+    "components" : 
+    { "schemas" : 
+      { "Registratiegegevens" : 
+        { "title" : "Registratiegegevens",
+          "type" : "object",
+          "required" : 
+          [ "tijdstipRegistratie",
+            "eindRegistratie" ],
+          "properties" : 
+          { "tijdstipRegistratie" : 
+            { "title" : "tijdstipRegistratie",
+              "type" : "string",
+              "format" : "date-time",
+              "minItems" : "1" },
+            "eindRegistratie" : 
+            { "title" : "eindRegistratie",
+              "type" : 
+              [ "string",
+                null ],
+              "format" : "date-time",
+              "minItems" : "1" } } },
+        "Gebouw" : 
+        { "title" : "Gebouw",
+          "type" : "object",
+          "required" : 
+          [ "identificatie",
+            "domein",
+            "bouwjaar",
+            "sloopjaar",
+            "type",
+            "geometrie",
+            "isGeregistreerdMet" ],
+          "properties" : 
+          { "identificatie" : 
+            { "title" : "identificatie",
+              "type" : "string",
+              "minItems" : "1" },
+            "domein" : 
+            { "title" : "domein",
+              "description" : "Het domein waar het object aan toe behoort.",
+              "type" : "string",
+              "minItems" : "1" },
+            "bouwjaar" : 
+            { "title" : "bouwjaar",
+              "type" : 
+              [ "integer",
+                null ],
+              "minItems" : "1" },
+            "sloopjaar" : 
+            { "title" : "sloopjaar",
+              "type" : 
+              [ "integer",
+                null ],
+              "minItems" : "1" },
+            "type" : 
+            { "title" : "type",
+              "type" : 
+              [ "string",
+                null ],
+              "minItems" : "1" },
+            "geometrie" : 
+            { "title" : "geometrie",
+              "$ref" : "#\/components\/schemas\/Geometrie" },
+            "heeftAlsAdres" : 
+            { "title" : "heeftAlsAdres",
+              "description" : "Een Gebouw heeft nul of meer Adressen",
+              "type" : "array",
+              "items" : 
+              { "$ref" : "#\/components\/schemas\/Adres" },
+              "minItems" : "0" },
+            "isGeregistreerdMet" : 
+            { "title" : "isGeregistreerdMet",
+              "$ref" : "#\/components\/schemas\/Registratiegegevens" } } },
+        "Geometrie" : 
+        { "title" : "Geometrie",
+          "type" : "object",
+          "required" : 
+          [ "bovenaanzicht",
+            "maaiveld",
+            "3d" ],
+          "properties" : 
+          { "bovenaanzicht" : 
+            { "title" : "bovenaanzicht",
+              "$ref" : "#\/components\/schemas\/polygonGeoJSON" },
+            "maaiveld" : 
+            { "title" : "maaiveld",
+              "$ref" : "#\/components\/schemas\/multipolygonGeoJSON" },
+            "3d" : 
+            { "title" : "3d",
+              "$ref" : "#\/components\/schemas\/UNKNOWN-OAS-TYPE" } } },
+        "Adres" : 
+        { "title" : "Adres",
+          "description" : "Een samengesteld adres van gegevens van een Nummeraanduiding, Openbare ruimte en Woonplaats in de Basisregistratie Adressen en Gebouwen (BAG).",
+          "type" : "object",
+          "required" : 
+          [ "identificatie",
+            "domein",
+            "omschrijving",
+            "straatnaam",
+            "huisnummer",
+            "plaatsnaam",
+            "isHoofdadres",
+            "isGeregistreerdMet" ],
+          "properties" : 
+          { "identificatie" : 
+            { "title" : "identificatie",
+              "description" : "Domein waartoe het object behoort.",
+              "type" : "string",
+              "minItems" : "1" },
+            "domein" : 
+            { "title" : "domein",
+              "description" : "Het domein waar het object aan toe behoort.",
+              "type" : "string",
+              "minItems" : "1" },
+            "omschrijving" : 
+            { "title" : "omschrijving",
+              "description" : "De unieke aanduiding van een nummeraanduiding.",
+              "type" : "string",
+              "minItems" : "1" },
+            "straatnaam" : 
+            { "title" : "straatnaam",
+              "description" : "Een naam die aan een openbare ruimte is toegekend in een daartoe strekkend formeel gemeentelijk besluit.",
+              "type" : "string",
+              "minLength" : "1",
+              "minItems" : "1" },
+            "huisnummer" : 
+            { "title" : "huisnummer",
+              "description" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering.",
+              "type" : "integer",
+              "minLength" : "1",
+              "pattern" : "^[1-9][0-9]{0,4}$",
+              "minItems" : "1" },
+            "huisletter" : 
+            { "title" : "huisletter",
+              "description" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken.",
+              "type" : 
+              [ "string",
+                null ],
+              "pattern" : "^[a-zA-Z]{1}$",
+              "minItems" : "0" },
+            "huisnummertoevoeging" : 
+            { "title" : "huisnummertoevoeging",
+              "description" : "Een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.",
+              "type" : 
+              [ "string",
+                null ],
+              "minLength" : "1",
+              "pattern" : "^[0-9a-zA-Z]{1,4}$",
+              "minItems" : "0" },
+            "postcode" : 
+            { "title" : "postcode",
+              "description" : "De door PostNL vastgestelde code behorende bij een bepaalde combinatie van een straatnaam en een huisnummer.",
+              "type" : 
+              [ "string",
+                null ],
+              "pattern" : "^[1-9][0-9]{3}[A-Z]{2}$",
+              "minItems" : "0" },
+            "plaatsnaam" : 
+            { "title" : "plaatsnaam",
+              "description" : "De benaming van een door het gemeentebestuur aangewezen woonplaats.",
+              "type" : "string",
+              "minLength" : "1",
+              "minItems" : "1" },
+            "isHoofdadres" : 
+            { "title" : "isHoofdadres",
+              "description" : "Indicatie of het adres een hoofdadres is.",
+              "type" : "boolean",
+              "minItems" : "1" },
+            "isGeregistreerdMet" : 
+            { "title" : "isGeregistreerdMet",
+              "$ref" : "#\/components\/schemas\/Registratiegegevens" } } },
+        "polygonGeoJSON" : 
+        { "type" : "object",
+          "required" : 
+          [ "type",
+            "coordinates" ],
+          "properties" : 
+          { "type" : 
+            { "type" : "string",
+              "enum" : 
+              [ "Polygon" ] },
+            "coordinates" : 
+            { "type" : "array",
+              "items" : 
+              { "type" : "array",
+                "minItems" : 4,
+                "items" : 
+                { "type" : "array",
+                  "minItems" : 2,
+                  "items" : 
+                  { "type" : "number" } } } } } },
+        "multipolygonGeoJSON" : 
+        { "type" : "object",
+          "required" : 
+          [ "type",
+            "coordinates" ],
+          "properties" : 
+          { "type" : 
+            { "type" : "string",
+              "enum" : 
+              [ "MultiPolygon" ] },
+            "coordinates" : 
+            { "type" : "array",
+              "items" : 
+              { "type" : "array",
+                "items" : 
+                { "type" : "array",
+                  "minItems" : 4,
+                  "items" : 
+                  { "type" : "array",
+                    "minItems" : 2,
+                    "items" : 
+                    { "type" : "number" } } } } } } },
+        "Object" : 
+        { "error" : "undefined" } } } }

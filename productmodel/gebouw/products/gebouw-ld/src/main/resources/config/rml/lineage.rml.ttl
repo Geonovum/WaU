@@ -1,0 +1,335 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+
+@prefix gebouw: <http://modellen.geostandaarden.nl/def/gebouw#> .
+@prefix bag: <http://bag.basisregistraties.overheid.nl/def/bag#> .
+@prefix orch: <http://modellen.geostandaarden.nl/def/orchestrate#> .
+
+@prefix fn: <http://geostandaarden.nl/id/function/> .
+
+@prefix : <http://mappings.geostandaarden.nl/adres/id/mapping/> .
+
+:StatementWithLineageLogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$.geregistreerdMet.bestaatUit[*]" ;
+.
+
+:StatementWithLineage a rr:TriplesMap ;
+  rml:logicalSource :StatementWithLineageLogicalSource ;
+  rr:subjectMap [
+    rr:template "{kenmerk}-{waarde}" ;
+    rr:class rdf:Statement, gebouw:GeorkestreerdGegeven, prov:Entity ;
+    rr:termType rr:BlankNode ;
+  ] ;
+  rr:predicateObjectMap
+    :StatementWithLineage_subject , # specified in specific type mapping file
+    :StatementWithLineage_predicate ,
+    :StatementWithLineage_object ,
+    :StatementWithLineage_wasGeneratedBy ;
+    # :StatementWithLineage_isDerivedFrom ;
+.
+
+:StatementWithLineage_predicate a rr:PredicateObjectMap ;
+  rr:predicate rdf:predicate ;
+  rr:objectMap [
+    rr:template "http://modellen.geostandaarden.nl/def/gebouw#{kenmerk}"
+  ] ;
+.
+
+:StatementWithLineage_object a rr:PredicateObjectMap ;
+  rr:predicate rdf:object ;
+  rr:objectMap [
+    rml:reference "waarde.stringValue" ;
+  ] ;
+  rr:objectMap [
+    rml:reference "waarde.integerValue" ;
+    rr:datatype xsd:integer ;
+  ] ;
+  rr:objectMap [
+    rml:reference "waarde.booleanValue" ;
+    rr:datatype xsd:boolean ;
+  ] ;
+.
+
+:StatementWithLineage_wasGeneratedBy a rr:PredicateObjectMap ;
+  rr:predicate prov:wasGeneratedBy ;
+  rr:objectMap [
+    rr:parentTriplesMap :PropertyMappingExecution ;
+  ] ;
+.
+
+:PropertyMappingExecution a rr:TriplesMap ;
+  rml:logicalSource :StatementWithLineageLogicalSource ;
+  rr:subjectMap [
+    rr:template "PropertyMappingExecution-{kenmerk}-{waarde}" ;
+    rr:class orch:PropertyMappingExecution, prov:Activity ;
+    rr:termType rr:BlankNode ;
+  ] ;
+  rr:predicateObjectMap
+    :PropertyMappingExecution_used ;
+.
+
+:PropertyMappingExecution_used a rr:PredicateObjectMap ;
+  rr:predicate prov:used ;
+  rr:objectMap [
+    rr:parentTriplesMap :PropertyMapping ;
+  ]
+.
+
+:PropertyMapping a rr:TriplesMap ;
+  rml:logicalSource :StatementWithLineageLogicalSource ;
+  rr:subjectMap [
+    rr:template "PropertyMapping-{kenmerk}-{waarde}" ;
+    rr:class orch:PropertyMapping, prov:Entity ;
+    rr:termType rr:BlankNode ;
+  ] ;
+  rr:predicateObjectMap
+    :PropertyMapping_pathMapping ;
+.
+
+:PropertyMapping_pathMapping a rr:PredicateObjectMap ;
+  rr:predicate orch:pathMapping ;
+  rr:objectMap [
+    rr:parentTriplesMap :PropertyPathMapping ;
+    rr:joinCondition [
+      rr:child "wasGeneratedBy.used.pathMapping[*]";
+      rr:parent "@" ;
+    ] ;
+  ] ;
+.
+
+:PropertyPathMapping a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.geregistreerdMet.bestaatUit[*].wasGeneratedBy.used.pathMapping[*]" ;
+  ] ;
+  rr:subjectMap [
+    rml:reference "@" ;
+    rr:class orch:PropertyMapping, prov:Entity ;
+    rr:termType rr:BlankNode ;
+  ] ;
+  rr:predicateObjectMap
+    :PropertyPathMapping_path ;
+.
+
+:PropertyPathMapping_path a rr:PredicateObjectMap ;
+  rr:predicate orch:path ;
+  rr:objectMap [
+    rr:parentTriplesMap :PropertyPath ;
+    rr:joinCondition [
+      rr:child "path[*]";
+      rr:parent "@" ;
+    ] ;
+  ] ;
+.
+
+:PropertyPath a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.geregistreerdMet.bestaatUit[*].wasGeneratedBy.used.pathMapping[*].path[*]" ;
+  ] ;
+  rr:subjectMap [
+    rml:reference "@" ;
+    rr:class orch:PropertyPath ;
+    rr:termType rr:BlankNode ;
+  ] ;
+  rr:predicateObjectMap
+    :PropertyPath_references ,
+    :PropertyPath_startNode ,
+    :PropertyPath_segments ;
+.
+
+:PropertyPath_segments a rr:PredicateObjectMap ;
+  rr:predicate orch:segments ;
+  rr:objectMap [
+    rml:reference "segments[*]" ;
+  ] ;
+.
+
+:PropertyPath_references a rr:PredicateObjectMap ;
+  rr:predicate orch:references ;
+  rr:objectMap [
+    rr:parentTriplesMap :SourceStatement ;
+    rr:joinCondition [
+      rr:child "references[*]";
+      rr:parent "@" ;
+    ] ;
+  ] ;
+.
+
+# :StatementWithLineage_isDerivedFrom a rr:PredicateObjectMap ;
+#   rr:predicate prov:wasDerivedFrom ;
+#   rr:objectMap [
+#     rr:parentTriplesMap :SourceStatement ;
+#     rr:joinCondition [
+#       rr:child "isDerivedFrom.[*]" ;
+#       rr:parent "@" ;
+#     ] ;
+#   ] ;
+# .
+
+:SourceStatementLogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$.geregistreerdMet.bestaatUit[*].wasGeneratedBy.used.pathMapping[*].path[*].references[*]" ;
+.
+
+:SourceStatement a rr:TriplesMap ;
+  rml:logicalSource :SourceStatementLogicalSource ;
+  rr:subjectMap [
+    rr:template "{onderwerp.identificatie}-{kenmerk}-{waarde}" ;
+    rr:termType rr:BlankNode ;
+    rr:class rdf:Statement, gebouw:Brongegeven ;
+  ] ;
+  rr:predicateObjectMap
+    # :StatementWithLineage_subject ,
+    :SourceStatement_subject ,
+    :SourceStatement_predicate ,
+    :StatementWithLineage_object ;
+    # :SourceStatement_propertyPath ;
+.
+
+:SourceStatement_propertyPath
+  rr:predicate gebouw:propertyPath ;
+  rr:objectMap [
+    rml:reference "propertyPath" ;
+  ] ;
+.
+
+:SourceStatement_subject
+  rr:predicate rdf:subject ;
+  rr:objectMap [
+    rr:parentTriplesMap :SourceSubject ;
+    rr:joinCondition [
+      rr:child "onderwerp.identificatie" ;
+      rr:parent "identificatie" ;
+    ] ;
+  ] ;
+.
+
+:SourceStatement_predicate a rr:PredicateObjectMap ;
+  rr:predicate rdf:predicate ;
+  rr:objectMap [
+    # rr:template "http://bag.basisregistraties.overheid.nl/def/bag#{kenmerk}"
+    
+    fnml:functionValue [
+      rml:logicalSource :SourceStatementLogicalSource ;
+      rr:subjectMap [
+        rr:template "onderwerp.identificatie" ;
+        rr:termType rr:BlankNode ;
+      ] ;
+      rr:predicateObjectMap [
+        rr:predicate fno:executes ;
+        rr:object fn:getPredicateIri ;
+      ] , [ 
+        rr:predicate fn:idParam ;
+        rr:objectMap [
+          rml:reference "onderwerp.identificatie" ;
+        ] ;
+      ] , [ 
+        rr:predicate fn:valueParam ;
+        rr:objectMap [
+          rml:reference "kenmerk" ;
+        ] ;
+      ] ;
+    ] ;
+  ] ;
+.
+
+:SourceSubjecLogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$.geregistreerdMet.bestaatUit[*].wasGeneratedBy.used.pathMapping[*].path[*].references[*].onderwerp" ;
+.
+
+:SourceSubject a rr:TriplesMap ;
+  rml:logicalSource :SourceSubjecLogicalSource ;
+  rr:subjectMap [
+    fnml:functionValue [
+      rml:logicalSource :SourceStatementLogicalSource ;
+      rr:subjectMap [
+        rr:template "identificatie" ;
+        rr:termType rr:BlankNode ;
+      ] ;
+      rr:predicateObjectMap [
+        rr:predicate fno:executes ;
+        rr:object fn:getObjectIri ;
+      ] , [ 
+        rr:predicate fn:idParam ;
+        rr:objectMap [
+          rml:reference "identificatie" ;
+        ] ;
+      ] , [ 
+        rr:predicate fn:valueParam ;
+        rr:objectMap [
+          rml:reference "type" ;
+        ] ;
+      ] ;
+    ] ;
+    rr:termType rr:IRI ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdf:type ;
+    rr:objectMap [
+      # rr:template "http://bag.basisregistraties.overheid.nl/def/bag#{type}" ;
+      fnml:functionValue [
+        rml:logicalSource :SourceStatementLogicalSource ;
+        rr:subjectMap [
+          rr:template "identificatie" ;
+          rr:termType rr:BlankNode ;
+        ] ;
+        rr:predicateObjectMap [
+          rr:predicate fno:executes ;
+          rr:object fn:getTypeIri ;
+        ] , [ 
+          rr:predicate fn:idParam ;
+          rr:objectMap [
+            rml:reference "identificatie" ;
+          ] ;
+        ] , [ 
+          rr:predicate fn:valueParam ;
+          rr:objectMap [
+            rml:reference "type" ;
+          ] ;
+        ] ;
+      ] ;
+    ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicateMap [
+      fnml:functionValue [
+        rml:logicalSource :SourceStatementLogicalSource ;
+        rr:subjectMap [
+          rr:template "identificatie" ;
+          rr:termType rr:BlankNode ;
+        ] ;
+        rr:predicateObjectMap [
+          rr:predicate fno:executes ;
+          rr:object fn:getPredicateIri ;
+        ] , [ 
+          rr:predicate fn:idParam ;
+          rr:objectMap [
+            rml:reference "identificatie" ;
+          ] ;
+        ] , [ 
+          rr:predicate fn:valueParam ;
+          rr:object "identificatie"
+        ] ;
+      ] ;
+      rr:termType rr:IRI ;
+    ] ;
+    rr:objectMap [
+      rml:reference "identificatie" ;
+    ] ;
+  ] ;
+.

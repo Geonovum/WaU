@@ -1,0 +1,35 @@
+logging:
+  level:
+    root: info
+    org.dotwebstack: DEBUG
+
+server:
+  port: 8082
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  server:
+    port: 8083
+
+dotwebstack:
+  baseUrl: ${BASE_URL:http://localhost:8082}
+  baseUrlData: https://wau.ldproxy.net/ld/
+  rml:
+    namespacePrefixes:
+      gebouw: http://modellen.geostandaarden.nl/def/gebouw#
+      orch: http://modellen.geostandaarden.nl/def/orchestrate#
+      nen3610: http://modellen.geostandaarden.nl/def/nen3610#
+      prov: http://www.w3.org/ns/prov#
+      bag: http://bag.basisregistraties.overheid.nl/def/bag#
+      imgeo: http://modellen.geostandaarden.nl/def/imgeo#
+  orchestrate:
+    root: proxy
+    subschemas:
+      proxy:
+        endpoint: ${LOOKUP_API_URL:http://localhost:8080/graphql}
+  openapi:
+    cors:
+      enabled: true

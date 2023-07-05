@@ -1,0 +1,114 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+
+@prefix adr: <http://modellen.geostandaarden.nl/def/adres#> .
+@prefix nen3610: <http://modellen.geostandaarden.nl/def/nen3610#> .
+
+@prefix : <http://mappings.geostandaarden.nl/adres/id/mapping/> .
+
+:LogicalSource
+  rml:source "" ;
+  rml:referenceFormulation ql:JSONPath ;
+  rml:iterator "$" ;
+.
+
+:Adres a rr:TriplesMap ;
+  rml:logicalSource :LogicalSource ;
+  rr:subjectMap [
+    rr:template "https://wau.ldproxy.net/ld/id/adres/{identificatie}" ;
+    rr:class adr:Adres ;
+  ] ;
+  rr:predicateObjectMap
+    :Adres_identificatie ,
+    :Adres_huisnummer ,
+    :Adres_postcode ,
+    :Adres_straatnaam ,
+    :Adres_plaatsnaam ,
+    :Adres_isHoofdadres ,
+    :Adres_omschrijving ,
+    :Adres_registratiegegevens ;
+.
+
+:Adres_identificatie a rr:PredicateObjectMap ;
+  rr:predicate adr:identificatie ;
+  rr:objectMap [
+    rml:reference "identificatie" ;
+  ] ;
+.
+
+:Adres_huisnummer a rr:PredicateObjectMap ;
+  rr:predicate adr:huisnummer ;
+  rr:objectMap [
+    rml:reference "huisnummer" ;
+    rr:datatype xsd:integer ;
+  ] ;
+.
+
+:Adres_postcode a rr:PredicateObjectMap ;
+  rr:predicate adr:postcode ;
+  rr:objectMap [
+    rml:reference "postcode" ;
+  ] ;
+.
+
+:Adres_straatnaam a rr:PredicateObjectMap ;
+  rr:predicate adr:straatnaam ;
+  rr:objectMap [
+    rml:reference "straatnaam" ;
+  ] ;
+.
+
+:Adres_plaatsnaam a rr:PredicateObjectMap ;
+  rr:predicate adr:plaatsnaam ;
+  rr:objectMap [
+    rml:reference "plaatsnaam" ;
+  ] ;
+.
+
+:Adres_isHoofdadres a rr:PredicateObjectMap ;
+  rr:predicate adr:isHoofdadres ;
+  rr:objectMap [
+    rml:reference "isHoofdadres" ;
+    rr:datatype xsd:boolean ;
+  ] ;
+.
+
+:Adres_omschrijving a rr:PredicateObjectMap ;
+  rr:predicate adr:omschrijving ;
+  rr:objectMap [
+    rml:reference "omschrijving" ;
+  ] ;
+.
+
+:Adres_registratiegegevens a rr:PredicateObjectMap ;
+  rr:predicate nen3610:registratiegegevens ;
+  rr:objectMap [
+    rr:parentTriplesMap :Registratiegegevens ;
+  ] ;
+.
+
+:Registratiegegevens a rr:TriplesMap ;
+  rml:logicalSource :LogicalSource ;
+  rr:subjectMap [
+    rr:template "registratiegegevens-{identificatie}" ;
+    rr:class nen3610:Registratiegegevens, prov:Entity ;
+  ] ;
+  rr:predicateObjectMap
+    [
+      rr:predicate dcterms:hasPart ;
+      rr:objectMap [
+        rr:parentTriplesMap :StatementWithLineage ;
+        rr:joinCondition [
+          rr:child "hasLineage.orchestratedProperties.[*]" ;
+          rr:parent "@" ;
+        ] ;
+      ] ;
+    ] ;
+.

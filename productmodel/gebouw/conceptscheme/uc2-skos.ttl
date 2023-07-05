@@ -1,0 +1,92 @@
+# Maintained manually
+
+@prefix bk: <https://begrippen.geostandaarden.nl/sam/id/begrippenkader/> .
+@prefix col: <https://begrippen.geostandaarden.nl/sam/id/collectie/> .
+@prefix : <https://begrippen.geostandaarden.nl/sam/id/begrip/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+bk:WaU-SAM
+   a skos:ConceptScheme ;
+   rdfs:label "Samenhangend begrippenkader geo-basisregistraties"@nl ;
+   skos:prefLabel "SAM"@nl ;
+.
+
+:omschrijving
+   a skos:Concept ;
+   skos:definition "De aggregatie van alle adresonderdelen, i.e. straatnaam, huisnummer, huisletter, huisnummertoevoeging, postcode en plaatsnaam."@nl ;
+   skos:prefLabel "omschrijving"@nl ;
+   rdfs:label "omschrijving" ;
+   skos:inScheme bk:WaU-SAM ;
+   # GEEN MATCH GEVONDEN ;
+.
+
+:straatnaam
+   a skos:Concept ;
+   skos:definition "De benaming van een openbare ruimte van het type weg zoals door het gemeentebestuur aangewezen."@nl ;
+   skos:prefLabel "straatnaam"@nl ;
+   rdfs:label "straatnaam" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
+.
+
+:plaatsnaam
+   a skos:Concept ;
+   skos:definition "De benaming van een woonplaats zoals door het gemeentebestuur aangewezen."@nl ;
+   skos:prefLabel "plaatsnaam"@nl ;
+   rdfs:label "plaatsnaam" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Naam> ;
+.
+
+:geometrie
+   a skos:Concept ;
+   skos:definition "Een geometrische representatie van een object ."@nl ;
+   skos:prefLabel "geometrie"@nl ;
+   rdfs:label "geometrie" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:closeMatch <http://definities.geostandaarden.nl/nen3610-2022/id/begrip/georeferentie> ;
+   skos:narrowMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Geometrie> ;
+.
+
+:3d_geometrie
+   a skos:Concept ;
+   skos:definition "Een geometrische representatie van een object in drie dimensies."@nl ;
+   skos:prefLabel "3D-geometrie"@nl ;
+   rdfs:label "3D-geometrie" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:broader :geometrie ;
+.
+
+:maaiveldgeometrie
+   a skos:Concept ;
+   skos:definition "Een geometrische representatie van de plek waar een fysiek object de ondergrond raakt (i.e. de 'footprint')."@nl ;
+   skos:prefLabel "maaiveldgeometrie"@nl ;
+   rdfs:label "maaiveldgeometrie" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:broader :geometrie ;
+.
+
+:gebouwtype
+   a skos:Concept ;
+   skos:definition "Het oorspronkelijke gebruiksdoel van een gebouw."@nl ;
+   skos:prefLabel "gebouwtype"@nl ;
+   rdfs:label "gebouwtype" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:narrowMatch <http://bag.basisregistraties.overheid.nl/id/begrip/Gebruiksdoel> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imgeo/id/begrip/Bgt-type_overigBouwwerk> ;
+   skos:narrowMatch <http://definities.geostandaarden.nl/imgeo/id/begrip/Plus-type_overigBouwwerk> ;
+   skos:narrowMatch <http://brt.basisregistraties.overheid.nl/id/begrip/TypeGebouw> ;
+.
+
+:sloopjaar
+   a skos:Concept ;
+   skos:definition "Het jaar dat de sloop van een gebouw is voltooid."@nl ;
+   skos:prefLabel "sloopjaar"@nl ;
+   rdfs:label "sloopjaar" ;
+   skos:inScheme bk:WaU-SAM ;
+   skos:relatedMatch <http://bag.basisregistraties.overheid.nl/id/begrip/PandGesloopt> ;
+.
