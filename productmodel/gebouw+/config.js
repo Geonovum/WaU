@@ -38,6 +38,9 @@ function custGHPG(respecConfig)
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
+	
+  title: "UC3 Gebouw+",
+  subtitle: "Semantische samenhang tussen basisregistraties",  
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   //specStatus: "GN-BASIS",             // Basis Document
   //specStatus: "GN-WV",              // Werk Versie
@@ -56,13 +59,13 @@ var respecConfig =
   // format: "markdown",                 // altijd "markdown" - JvG W3C aangepast, op 1 plek markdown aangeven    
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2022-07-11",  	    // Format is "YYYY-MM-DD"
+  publishDate: "2023-04-06",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/geonovum/WaU-UC3",
+  github: "https://github.com/geonovum/WaU/productmodel/gebouw+",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/geonovum/WaU-UC3/issues",
+  issueBase: "https://github.com/geonovum/WaU/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://geonovum.github.io/WaU-UC3",
+  edDraftURI: "https://geonovum.github.io/WaU/productmodel/gebouw+",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   
@@ -86,9 +89,9 @@ var respecConfig =
     }
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "WaU-UC3",  	              // Wordt gebruikt in de document URL
+  shortName: "WaU/productmodel/gebouw+",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
-  pubDomain: "WaU-UC3", 	              // Werk aan Uitvoering
+  pubDomain: "WaU/productmodel/gebouw+", 	              // Werk aan Uitvoering
   //pubDomain: "mim", 	            // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
   //pubDomain: "bro", 	            // Basisregistratie Ondergrond

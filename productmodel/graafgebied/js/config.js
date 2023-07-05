@@ -2,7 +2,8 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
   // title is verplicht! Neem hier de titel van het document op ----------------------
-  title: "Graafgebiedinformatie",
+  title: "UC5 Graafgebied",
+  subtitle: "Semantische samenhang tussen basisregistraties",
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   specStatus: "wv",                   // Werkversie
   //specStatus: "cv",               // Consultatieversie
@@ -21,13 +22,13 @@ let respecConfig = {
   //specType: "BP",                 // Best Practice
   //specType: "HR",
   //-- pubDomain is verplicht! (komt in de URL) -------------------------------------
-  pubDomain: "sam",
+  pubDomain: "WaU/productmodel/graafgebied",
   //-- license: voor de geldende gebruiksvoorwaarden. Default is cc-by.
   //licence: "cc-by-nd",            // bronvermelding, geen afgeleide werken (default)
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-  shortName: "WaU-UC5",
+  shortName: "WaU/productmodel/graafgebied",
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2023-03-28",
@@ -58,7 +59,7 @@ let respecConfig = {
       }
     ],
   //neem hier de URL van de github repository op waar het respec document in staat
-  github: "https://github.com/geonovum/WaU-UC5",
+  github: "https://github.com/geonovum/WaU/productmodel/graafgebied",
   // Create PDF and link to file in header (optional):
   alternateFormats: [
       {

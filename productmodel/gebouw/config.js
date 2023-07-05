@@ -38,6 +38,8 @@ function custGHPG(respecConfig)
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
+  title: "UC2 Gebouw",
+  subtitle: "Semantische samenhang tussen basisregistraties",  
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   //specStatus: "GN-BASIS",             // Basis Document
   //specStatus: "GN-WV",              // Werk Versie
@@ -56,11 +58,11 @@ var respecConfig =
   // format: "markdown",                 // altijd "markdown" - JvG W3C aangepast, op 1 plek markdown aangeven    
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  publishDate: "2023-04-04",  	    // Format is "YYYY-MM-DD"
+  publishDate: "2023-03-10",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
   github: "https://github.com/geonovum/WaU/productmodel/gebouw,
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/geonovum/WaUissues",
+  issueBase: "https://github.com/geonovum/WaU/issues",
   //-- edDraftURI: de URI van de werkversie van het document
   edDraftURI: "https://geonovum.github.io/WaU/productmodel/gebouw",
   //-- de namen van de Editor(s) ------------------------------------------------------
@@ -86,9 +88,9 @@ var respecConfig =
     }
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "WaU-UC1",  	              // Wordt gebruikt in de document URL
+  shortName: "WaU/productmodel/gebouw",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
-  pubDomain: "WaU-UC1", 	              // Werk aan Uitvoering
+  pubDomain: "WaU/productmodel/gebouw", 	              // Werk aan Uitvoering
   //pubDomain: "mim", 	            // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
   //pubDomain: "bro", 	            // Basisregistratie Ondergrond

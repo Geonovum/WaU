@@ -38,6 +38,8 @@ function custGHPG(respecConfig)
 //-------------------------------------------------------------------------------------
 var respecConfig = 
 {
+  title: "UC1 Adres",
+  subtitle: "Semantische samenhang tussen basisregistraties",    
   //-- specStatus is verplicht! (activeer 1 van de volgende) --------------------------
   //specStatus: "GN-BASIS",             // Basis Document
   //specStatus: "GN-WV",              // Werk Versie
@@ -86,9 +88,9 @@ var respecConfig =
     }
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
-  shortName: "WaU-UC1",  	              // Wordt gebruikt in de document URL
+  shortName: "WaU/productmodel/adres",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
-  pubDomain: "WaU-UC1", 	              // Werk aan Uitvoering
+  pubDomain: "WaU/productmodel/adres", 	              // Werk aan Uitvoering
   //pubDomain: "mim", 	            // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
   //pubDomain: "bro", 	            // Basisregistratie Ondergrond
