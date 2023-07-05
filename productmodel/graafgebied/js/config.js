@@ -21,13 +21,13 @@ let respecConfig = {
   //specType: "BP",                 // Best Practice
   //specType: "HR",
   //-- pubDomain is verplicht! (komt in de URL) -------------------------------------
-  pubDomain: "WaU/productmodel/graafgebied",
+  pubDomain: "sam",
   //-- license: voor de geldende gebruiksvoorwaarden. Default is cc-by.
   //licence: "cc-by-nd",            // bronvermelding, geen afgeleide werken (default)
   //licence: "cc0",                 // Public Domain Dedication
   licence: "cc-by",                 // Attribution, met bronvermelding
   //-- shortName is verplicht! (komt in de URL: kies logische afkorting)--------------
-  shortName: "WaU/productmodel/graafgebied",
+  shortName: "WaU-UC5",
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
   //publishDate: "2023-03-28",
