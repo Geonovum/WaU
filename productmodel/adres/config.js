@@ -56,13 +56,13 @@ var respecConfig =
   // format: "markdown",                 // altijd "markdown" - JvG W3C aangepast, op 1 plek markdown aangeven    
   //-- publishDate is verplicht -------------------------------------------------------
   //-- NB: in de werkversie uitzetten, want dan pakt Respec de pushdate ---------------
-  //publishDate: "2022-07-11",  	    // Format is "YYYY-MM-DD"
+  publishDate: "2023-02-10",  	    // Format is "YYYY-MM-DD"
   //-- Repositorynaam op GitHub -------------------------------------------------------
-  github: "https://github.com/geonovum/WaU-UC1",
+  github: "https://github.com/geonovum/WaU/productmodel/adres",
   //-- Repositorynaam/issues op GitHub ------------------------------------------------
-  issueBase: "https://github.com/geonovum/WaU-UC1/issues",
+  issueBase: "https://github.com/geonovum/WaU/issues",
   //-- edDraftURI: de URI van de werkversie van het document
-  edDraftURI: "https://geonovum.github.io/WaU-UC1",
+  edDraftURI: "https://geonovum.github.io/WaU/productmodel/adres",
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   
